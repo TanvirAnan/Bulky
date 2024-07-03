@@ -1,4 +1,4 @@
-﻿namespace Bulkyweb.Controllers
+﻿namespace BulkyBookweb.Controllers
 {
     internal class ErrorViewModel
     {
