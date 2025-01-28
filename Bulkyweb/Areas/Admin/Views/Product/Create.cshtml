@@ -1,0 +1,151 @@
+﻿@model ProductVM
+<div class="card shadow border my-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-0">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">      
+                        Create Product
+                    </h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row" enctype="multipart/form-data">
+            <div class="border p-3">
+               
+                @* <div asp-validation-summary="All" id="Validation"></div> ---- dotnet validation *@
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="@Model.Product.Title" id="Name" class="form-control border-0 shadow"  />
+                    <label asp-for="Product.Title" class="ms-2">
+
+                    </label>
+                    
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.Title" class="text-danger"></span>
+
+                </div>
+                 <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Product.Description" id="Name" class="form-control border-0 shadow"></textarea>
+                    <label asp-for="Product.Description" class="ms-2">
+
+                    </label>
+                    
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.Description" class="text-danger"></span>
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Product.ISBN" id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Product.ISBN" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.ISBN" class="text-danger"></span>
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Product.Author" id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Product.Author" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.Author" class="text-danger"></span>
+
+                </div>
+
+
+
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Product.ListPrice" id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Product.ListPrice" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.ListPrice" class="text-danger"></span>
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Product.Price" id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Product.Price" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.Price" class="text-danger"></span>
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Product.Price50" id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Product.Price50" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.Price50" class="text-danger"></span>
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Product.Price100" id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Product.Price100" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.Price100" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-floating py-2 col-12">
+                    <select asp-for="Product.CatagoryId" asp-items="@Model.CatagoryList" class="form-select border-0 shadow">
+                        <option disabled selected>--Select Catagory</option>
+                    </select>
+                    <label asp-for="Product.CatagoryId" class="ms-2">
+
+                    </label>
+
+                    @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
+                    <span asp-validation-for="Product.CatagoryId" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-floating py-2 col-12">
+                    <input type="file" asp-for="Product.ImageUrl"  class="form-select border-0 shadow"/>           
+                    <label asp-for="Product.ImageUrl" class="ms-2">
+                    </label>
+                </div>
+               
+
+
+                
+               
+                <div class="row pt-2">
+                    <div class="col-3 col-md-3" style="width:21%">
+                        <button type="submit" class="btn btn-primary" style="width:250px">Create</button>
+                    </div>
+                    <div class="col-3 col-md-3">
+                        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary border" style="width:250px">
+                            Back to List
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            @*    <script src="~/js/validation.js"></script> ---js validation *@
+
+        </form>
+
+    </div>
+
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,46 +1,46 @@
-﻿@model Catagory
+﻿@model Catagory 
 <div class="card shadow border mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-0">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">
-                    Edit Catagory
-                </h2>
+                <h2 class="text-white py-2">      
+                        Create Catagory
+                    </h2>
             </div>
         </div>
     </div>
     <div class="card-body p-4">
         <form method="post" class="row">
             <div class="border p-3">
-
+               
                 @* <div asp-validation-summary="All" id="Validation"></div> ---- dotnet validation *@
                 <div class="form-floating py-2 col-12">
-                    <input asp-for="Name" id="Name" class="form-control border-0 shadow" />
+                    <input asp-for="Name" id="Name" class="form-control border-0 shadow"  />
                     <label asp-for="Name" class="ms-2">
 
                     </label>
-
+                    
                     @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
                     <span asp-validation-for="Name" class="text-danger"></span>
 
                 </div>
-                <div class="form-floating py-2 col-12">
+                 <div class="form-floating py-2 col-12">
                     <input asp-for="DisplayOrder" id="Name" class="form-control border-0 shadow" />
                     <label asp-for="DisplayOrder" class="ms-2">
 
                     </label>
-
+                    
                     @* <div asp-validation-summary="All" id="Validation"></div> -----for js validation*@
                     <span asp-validation-for="DisplayOrder" class="text-danger"></span>
 
                 </div>
 
 
-
-
+                
+               
                 <div class="row pt-2">
                     <div class="col-3 col-md-3" style="width:21%">
-                        <button type="submit" class="btn btn-primary" style="width:250px">Edit</button>
+                        <button type="submit" class="btn btn-primary" style="width:250px">Create</button>
                     </div>
                     <div class="col-3 col-md-3">
                         <a asp-controller="Catagory" asp-action="Index" class="btn btn-secondary border" style="width:250px">
@@ -65,5 +65,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
-
 

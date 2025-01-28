@@ -6,24 +6,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BulkyBook.DataAccess.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace BulkyBook.DataAccess.Repository
 {
-    public class CatagoryRepository : Repository<Catagory>, ICatagoryRepository
+    public class ProductRepository : Repository<Product>, IProductRepository
     { 
 
         private ApplicationDbContext _db;
-        public CatagoryRepository(ApplicationDbContext db):base(db) 
+        public ProductRepository(ApplicationDbContext db):base(db) 
         {
             _db = db;
+            
         }
 
 
        
 
-        public void Update(Catagory obj)
+        public void Update(Product obj)
         {
-            _db.Catagories.Update(obj);
+            _db.Products.Update(obj);
         }
     }
 }

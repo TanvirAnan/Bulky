@@ -1,0 +1,125 @@
+﻿@model Product
+<div class="card shadow border my-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-0">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">
+                    Delete Product
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row">
+            <div class="border p-3">
+
+                @* <div asp-validation-summary="All" id="Validation"></div> ---- dotnet validation *@
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Title" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Title" class="ms-2">
+
+                    </label>
+
+                 
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Description" id="Name" class="form-control border-0 shadow"></textarea>
+                    <label asp-for="Description" class="ms-2">
+
+                    </label>
+
+                  
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ISBN" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="ISBN" class="ms-2">
+
+                    </label>
+
+              
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Author" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Author" class="ms-2">
+
+                    </label>
+
+
+                </div>
+
+
+
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ListPrice" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="ListPrice" class="ms-2">
+
+                    </label>
+
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Price" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Price" class="ms-2">
+
+                    </label>
+
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Price50" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Price50" class="ms-2">
+
+                    </label>
+
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Price100" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Price100" class="ms-2">
+
+                    </label>
+
+
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="CatagoryId" disabled id="Name" class="form-control border-0 shadow" />
+                    <label asp-for="CatagoryId" class="ms-2">
+
+                    </label>
+
+                </div>
+
+
+
+
+                <div class="row pt-2">
+                    <div class="col-3 col-md-3" style="width:21%">
+                        <button type="submit" class="btn btn-primary" style="width:250px">Delete</button>
+                    </div>
+                    <div class="col-3 col-md-3">
+                        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary border" style="width:250px">
+                            Back to List
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            @*    <script src="~/js/validation.js"></script> ---js validation *@
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
